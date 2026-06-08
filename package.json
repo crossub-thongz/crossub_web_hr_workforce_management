@@ -1,0 +1,25 @@
+{
+  "name": "crossub-hr-workforce",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CROSSUB HR & Workforce Management — recruitment, onboarding, payroll, KPI, training, and AI-assisted HR operations.",
+  "scripts": {
+    "preinstall": "npx -y only-allow pnpm",
+    "dev": "bash scripts/dev-clean.sh",
+    "dev:raw": "pnpm -r --parallel run dev",
+    "dev:clean": "bash scripts/dev-clean.sh",
+    "dev:hr": "pnpm --filter @crossub/hr dev",
+    "build": "pnpm -r run build",
+    "build:hr": "pnpm --filter @crossub/hr build",
+    "start": "pnpm -r --parallel run start",
+    "start:hr": "pnpm --filter @crossub/hr start",
+    "lint": "pnpm -r run lint"
+  },
+  "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9",
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm"
+  }
+}
